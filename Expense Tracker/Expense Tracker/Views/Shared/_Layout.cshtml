@@ -6,13 +6,16 @@
     <title>@ViewData["Title"] - Expense_Tracker</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <!-- Syncfusion ASP.NET Core controls styles -->
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/22.2.5/material.css" /> <!--This is for syncfusion, above site.css -->
+    @* we comment it so we will use another style <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/22.2.5/material.css" /> <!--This is for syncfusion, above site.css -->*@
+
+    <link href="https://cdn.syncfusion.com/ej2/22.2.5/bootstrap5-dark.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Expense_Tracker.styles.css" asp-append-version="true" />
     <!-- Syncfusion ASP.NET Core controls scripts -->
     <script src="https://cdn.syncfusion.com/ej2/22.2.5/dist/ej2.min.js"></script>
 </head>
-<body>
+<body class="e-bigger">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -34,10 +37,16 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <div class="container mt-5" >
+        
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <main role="main" class="pb-3">
+                        @RenderBody()
+                    </main>
+                </div>
+            </div>
+            
     </div>
 
     <footer class="border-top footer text-muted">

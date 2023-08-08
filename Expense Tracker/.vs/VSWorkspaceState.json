@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Expense Tracker",
-    "\\Expense Tracker\\Migrations"
+    "\\Expense Tracker\\Migrations",
+    "\\Expense Tracker\\Views",
+    "\\Expense Tracker\\Views\\Category"
   ],
-  "SelectedNode": "\\Expense Tracker\\appsettings.json",
+  "SelectedNode": "\\Expense Tracker\\Views\\Category\\AddOrEdit.cshtml",
   "PreviewInSolutionExplorer": false
 }
