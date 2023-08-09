@@ -6,6 +6,6 @@
     "\\Expense Tracker\\Views",
     "\\Expense Tracker\\Views\\Category"
   ],
-  "SelectedNode": "\\Expense Tracker\\Views\\Category\\AddOrEdit.cshtml",
+  "SelectedNode": "\\Expense Tracker\\Views\\Category\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

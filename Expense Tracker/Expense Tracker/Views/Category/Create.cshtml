@@ -1,0 +1,79 @@
+﻿@model Expense_Tracker.Models.Category
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row">
+    <div class="col-md-7">
+
+
+        <div class="widget p-5">
+
+            <!-- Form to create a new category -->
+            <form asp-action="Create" class="e-form">
+
+                <!-- Type input -->
+                <div class="mb-3">
+                    <!-- Type selection using custom radio buttons -->
+                    <div class='e-btn-group custom-rbt-group'>
+                        <div class='e-btn-group'>
+                            <input type="radio" id="radioleft" name="Type" value="Expense" checked="@(Model.Type=="Expense")" />
+                            <label class="e-btn" for="radioleft">Expense</label>
+                            <input type="radio" id="radiomiddle" name="Type" value="Income" checked="@(Model.Type=="Income")" />
+                            <label class="e-btn" for="radiomiddle">Income</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Validation summary for model errors -->
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <!-- Title input -->
+                <div class="mb-3">
+                    <!-- Title input with float label -->
+                    <ejs-textbox id="title" placeholder="Title" ejs-for="Title" floatLabelType="Always" class="e-input"></ejs-textbox>
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <!-- Icon input -->
+                <div class="mb-3">
+                    <!-- Icon input with float label -->
+                    <ejs-textbox id="icon" placeholder="Icon" ejs-for="Icon" floatLabelType="Always" class="e-input"></ejs-textbox>
+                    <span asp-validation-for="Icon" class="text-danger"></span>
+                </div>
+
+                <!-- Submit button -->
+                <div class="mb-3">
+                    <!-- Create button with theme styling -->
+                    <input type="submit" value="Create" class="btn btn-primary e-btn">
+                </div>
+            </form>
+        </div>
+
+        
+
+
+    </div>
+    <div class="col-md-5">
+        <div class="widget h-100 d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-shapes fa-2xl">
+
+            </i>
+
+        </div>
+
+    </div>
+</div>
+
+<div>
+    <!-- Link to navigate back to the list -->
+    <a asp-action="Index" class="e-link">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        // Render validation scripts partial
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
