@@ -1,7 +1,8 @@
 ﻿@model Expense_Tracker.Models.Category
 
 @{
-    ViewData["Title"] = "Edit";
+    //ViewData["Title"] = "Edit";
+    ViewData["PageTitle"] = "Edit category";
 }
 
 <div class="row">
@@ -66,10 +67,7 @@
     </div>
 </div>
 
-<div>
-    <!-- Link to navigate back to the list -->
-    <a asp-action="Index" class="e-link">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{

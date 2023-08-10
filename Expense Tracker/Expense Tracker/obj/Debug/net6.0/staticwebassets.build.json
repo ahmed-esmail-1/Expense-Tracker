@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YKLfpA5OMEYsCQKLxjwkQ67hRfc5ioEUAN94EEkoWPw=",
+  "Hash": "xn+5HG+PSJ938VAlwu6TGYB1MdGKObLVp+ForjG4jzc=",
   "Source": "Expense Tracker",
   "BasePath": "_content/Expense Tracker",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Expense-Tracker\\Expense Tracker\\Expense Tracker\\wwwroot\\favicon-16x16.png",
+      "SourceId": "Expense Tracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Expense-Tracker\\Expense Tracker\\Expense Tracker\\wwwroot\\",
+      "BasePath": "_content/Expense Tracker",
+      "RelativePath": "favicon-16x16.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon-16x16.png"
+    },
+    {
+      "Identity": "C:\\Expense-Tracker\\Expense Tracker\\Expense Tracker\\wwwroot\\favicon-32x32.png",
+      "SourceId": "Expense Tracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Expense-Tracker\\Expense Tracker\\Expense Tracker\\wwwroot\\",
+      "BasePath": "_content/Expense Tracker",
+      "RelativePath": "favicon-32x32.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon-32x32.png"
     },
     {
       "Identity": "C:\\Expense-Tracker\\Expense Tracker\\Expense Tracker\\wwwroot\\js\\site.js",

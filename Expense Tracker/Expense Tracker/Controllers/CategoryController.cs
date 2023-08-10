@@ -132,11 +132,11 @@ namespace Expense_Tracker.Controllers
                 return NotFound();
             }
 
-            return View(category);
+            return await DeleteConfirmed(id.Value);
         }
 
         // POST: Category/Delete/5
-        [HttpPost, ActionName("Delete")]
+        //[HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {

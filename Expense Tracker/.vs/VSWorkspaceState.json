@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Expense Tracker",
+    "\\Expense Tracker\\Controllers",
     "\\Expense Tracker\\Migrations",
     "\\Expense Tracker\\Views",
     "\\Expense Tracker\\Views\\Category"
   ],
-  "SelectedNode": "\\Expense Tracker\\Views\\Category\\Index.cshtml",
+  "SelectedNode": "\\Expense Tracker\\Controllers\\CategoryController.cs",
   "PreviewInSolutionExplorer": false
 }
