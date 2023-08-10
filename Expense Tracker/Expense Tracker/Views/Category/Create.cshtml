@@ -27,14 +27,13 @@
                     </div>
                 </div>
 
-                <!-- Validation summary for model errors -->
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                
 
                 <!-- Title input -->
                 <div class="mb-3">
                     <!-- Title input with float label -->
                     <ejs-textbox id="title" placeholder="Title" ejs-for="Title" floatLabelType="Always" class="e-input"></ejs-textbox>
-                    <span asp-validation-for="Title" class="text-danger"></span>
+                    <span asp-validation-for="Title" class="text-danger fs-6"></span>
                 </div>
 
                 <!-- Icon input -->
@@ -67,10 +66,7 @@
     </div>
 </div>
 
-<div>
-    <!-- Link to navigate back to the list -->
-    <a asp-action="Index" class="e-link">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{
