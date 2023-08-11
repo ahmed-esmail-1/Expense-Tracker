@@ -21,6 +21,7 @@ namespace Expense_Tracker.Controllers
         // GET: Transaction
         public async Task<IActionResult> Index()
         {
+            // Retrieve transactions including related category
             var applicationDbContext = _context.Transactions.Include(t => t.Category);
             return View(await applicationDbContext.ToListAsync());
         }
@@ -28,16 +29,15 @@ namespace Expense_Tracker.Controllers
         // GET: Transaction/AddOrEdit
         public IActionResult AddOrEdit(int id = 0)
         {
-            PopulateCategories();
+            PopulateCategories(); // Populate the categories dropdown
+
             if (id == 0)
-                return View(new Transaction());
+                return View(new Transaction()); // Create new transaction
             else
-                return View(_context.Transactions.Find(id));
+                return View(_context.Transactions.Find(id)); // Edit existing transaction
         }
 
         // POST: Transaction/AddOrEdit
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddOrEdit([Bind("TransactionId,CategoryId,Amount,Note,Date")] Transaction transaction)
@@ -45,13 +45,15 @@ namespace Expense_Tracker.Controllers
             if (ModelState.IsValid)
             {
                 if (transaction.TransactionId == 0)
-                    _context.Add(transaction);
+                    _context.Add(transaction); // Add new transaction
                 else
-                    _context.Update(transaction);
+                    _context.Update(transaction); // Update existing transaction
+
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            PopulateCategories();
+
+            PopulateCategories(); // Populate the categories dropdown
             return View(transaction);
         }
 
@@ -60,10 +62,12 @@ namespace Expense_Tracker.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            // Check for null entity set
             if (_context.Transactions == null)
             {
-                return Problem("Entity set 'ApplicationDbContext.Transactions'  is null.");
+                return Problem("Entity set 'ApplicationDbContext.Transactions' is null.");
             }
+
             var transaction = await _context.Transactions.FindAsync(id);
             if (transaction != null)
             {
@@ -74,7 +78,7 @@ namespace Expense_Tracker.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-
+        // Non-action method to populate categories for dropdown
         [NonAction]
         public void PopulateCategories()
         {

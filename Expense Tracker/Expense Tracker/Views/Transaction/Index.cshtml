@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<Expense_Tracker.Models.Transaction>
 
 @{
+    // Set view data for page title and action buttons
     ViewData["PageTitle"] = "Transactions";
     ViewData["PageActionText"] = "+ New Transaction";
     ViewData["PageActionUrl"] = "/Transaction/AddOrEdit";
@@ -8,34 +9,43 @@
 
 <div class="row">
     <div class="col-md-7">
+        <!-- Display transactions using Syncfusion's EJ2 Grid component -->
         <ejs-grid id="transactions" dataSource="@Model" gridLines="None"
                   allowSorting="true" allowPaging="true">
             <e-grid-pagesettings pageSize="10"></e-grid-pagesettings>
             <e-grid-columns>
+                <!-- Display transaction category -->
                 <e-grid-column headerText="Category" field="CategoryTitleWithIcon"></e-grid-column>
+                <!-- Display transaction date -->
                 <e-grid-column headerText="Date" field="Date" width="110px"
                                type="date" format="MM-dd-yyyy" textAlign="Left"></e-grid-column>
+                <!-- Display transaction amount -->
                 <e-grid-column headerText="Amount" field="FormattedAmount" textAlign="Right" width="110px"></e-grid-column>
+                <!-- Display actions column using a template -->
                 <e-grid-column headerText="Actions" template="#actionColumnTemplate" width="100px"></e-grid-column>
             </e-grid-columns>
         </ejs-grid>
     </div>
     <div class="col-md-5">
+        <!-- Display a widget icon -->
         <div class="widget h-100 d-flex justify-content-center align-items-center">
             <i class="fa-solid fa-money-bill-transfer fa-2xl"></i>
         </div>
     </div>
 </div>
 
+<!-- Define the template for the actions column -->
 <script id="actionColumnTemplate" type="text/x-template">
     <div class="d-flex flex-row justify-content-start">
+        <!-- Edit transaction button -->
         <a class="btn btn-sm no-a-decoration" href="/Transaction/AddOrEdit/${TransactionId}">
             <i class="fa-solid fa-pen fa-lg"></i>
         </a>
+        <!-- Delete transaction button -->
         <form action="/Transaction/Delete/${TransactionId}" method="post">
     @Html.AntiForgeryToken()
             <button type="submit" class="btn btn-sm btn-link no-a-decoration"
-            onclick="return confirm(&quot;Are sure to delete this record?&quot;)">
+                    onclick="return confirm(&quot;Are you sure you want to delete this record?&quot;)">
                 <i class="fa-solid fa-trash-can fa-lg text-danger"></i>
             </button>
         </form>

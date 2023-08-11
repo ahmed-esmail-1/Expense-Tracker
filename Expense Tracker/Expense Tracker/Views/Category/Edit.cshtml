@@ -1,13 +1,12 @@
 ﻿@model Expense_Tracker.Models.Category
 
 @{
-    //ViewData["Title"] = "Edit";
+    // Set the view data
     ViewData["PageTitle"] = "Edit category";
 }
 
 <div class="row">
     <div class="col-md-7">
-
         <div class="widget p-5">
 
             <!-- Form to edit an existing category -->
@@ -18,15 +17,16 @@
                     <!-- Type selection using custom radio buttons -->
                     <div class='e-btn-group custom-rbt-group'>
                         <div class='e-btn-group'>
+                            <!-- Expense radio button -->
                             <input type="radio" id="radioleft" name="Type" value="Expense" checked="@(Model.Type=="Expense")" />
                             <label class="e-btn" for="radioleft">Expense</label>
+                            <!-- Income radio button -->
                             <input type="radio" id="radiomiddle" name="Type" value="Income" checked="@(Model.Type=="Income")" />
                             <label class="e-btn" for="radiomiddle">Income</label>
                         </div>
                     </div>
                 </div>
 
-                
                 <!-- Hidden input for CategoryId -->
                 <input type="hidden" asp-for="CategoryId" />
 
@@ -50,23 +50,16 @@
                     <input type="submit" value="Save" class="btn btn-primary e-btn">
                 </div>
             </form>
-
         </div>
-
-        
     </div>
     <div class="col-md-5">
         <div class="widget h-100 d-flex justify-content-center align-items-center">
             <i class="fa-solid fa-shapes fa-2xl">
-
+                <!-- Icon or content for the widget -->
             </i>
-
         </div>
-
     </div>
 </div>
-
-
 
 @section Scripts {
     @{

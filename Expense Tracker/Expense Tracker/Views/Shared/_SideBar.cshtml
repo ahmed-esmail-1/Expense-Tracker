@@ -1,8 +1,89 @@
-﻿
+﻿@{
+    // Define menu items
+    List<Object> menuItems = new List<Object>
+    {
+        new
+        {
+            text = "General",
+            separator = true
+        },
+        new
+        {
+            text = "Dashboard",
+            url = "/",
+            iconCss = "fa-solid fa-box"
+        },
+        new
+        {
+            text = "Categories",
+            url = "/Category",
+            iconCss = "fa-solid fa-folder-closed"
+        },
+        new
+        {
+            text = "Transactions",
+            iconCss = "fa-solid fa-arrow-right-arrow-left",
+            url = "/Transaction"
+        },
+        new
+        {
+            text = "Extras",
+            separator = true
+        },
+        new
+        {
+            text = "Reports",
+            iconCss = "fa-solid fa-chart-simple",
+            url = "#"
+        },
+        new
+        {
+            text = "Settings",
+            iconCss = "fa-solid fa-gear",
+            url = "#"
+        }
+    };
+}
 
+<ejs-sidebar id="sidebar" width="290px" enableDock dockSize="100px"
+             target=".dock-target" enableGestures="false">
+    <e-content-template>
+        <!-- Logo section -->
+        <div class="logo-wrapper">
+            <div class="app-logo">
+                <img src="~/logo.png" alt="App Logo" />
+            </div>
+            <div class="w-100"></div>
+            <i id="sidebar-toggler" class="fa-solid"></i>
+        </div>
 
+        <!-- Profile section -->
+        <div class="profile-wrapper">
+            <a href="/">
+                <img class="profile-pic" src="~/ProfilePic.png" alt="Profile Picture" />
+            </a>
+            <div class="titles d-flex flex-column ps-3">
+                <h6 class="mb-0">Wallet App</h6>
+                <span class="text-muted">Ahmed Esmail</span>
+            </div>
+        </div>
 
-<ejs-sidebar id="sidebar" width="290px">
-
-
+        <!-- Menu section -->
+        <ejs-menu id="menu"
+                  items="menuItems"
+                  orientation="Vertical"
+                  hamburgerMode></ejs-menu>
+    </e-content-template>
 </ejs-sidebar>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initialize sidebar
+        var dockBar = document.getElementById('sidebar').ej2_instances[0];
+
+        // Sidebar toggle button functionality
+        document.getElementById('sidebar-toggler').onclick = function () {
+            dockBar.toggle();
+        };
+    });
+</script>

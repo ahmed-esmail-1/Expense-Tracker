@@ -7,8 +7,10 @@
     "\\Expense Tracker\\Models",
     "\\Expense Tracker\\Views",
     "\\Expense Tracker\\Views\\Category",
-    "\\Expense Tracker\\Views\\Dashboard"
+    "\\Expense Tracker\\Views\\Dashboard",
+    "\\Expense Tracker\\wwwroot",
+    "\\Expense Tracker\\wwwroot\\css"
   ],
-  "SelectedNode": "\\Expense Tracker\\Controllers\\CategoryController.cs",
+  "SelectedNode": "\\Expense Tracker\\wwwroot\\css\\site.css",
   "PreviewInSolutionExplorer": false
 }
