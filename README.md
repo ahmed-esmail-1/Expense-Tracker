@@ -1,8 +1,14 @@
 # Expense-Tracker application in ASP .NET Core MVC
 
 Requirements:
+
 1- Visual Studio 2022
+
 2- Local SQL Database (Configure the connection in appsettings.json)
+
+
+
+
 
 ![Dashboard](https://github.com/ahmed-esmail-1/Expense-Tracker/assets/95763962/b44bbc4c-574c-4e57-9090-c95a6e696531)
 
