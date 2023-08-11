@@ -21,6 +21,7 @@
                         <div class='e-btn-group'>
                             <input type="radio" id="radioleft" name="Type" value="Expense" checked="@(Model.Type=="Expense")" />
                             <label class="e-btn" for="radioleft">Expense</label>
+
                             <input type="radio" id="radiomiddle" name="Type" value="Income" checked="@(Model.Type=="Income")" />
                             <label class="e-btn" for="radiomiddle">Income</label>
                         </div>
@@ -40,7 +41,7 @@
                 <div class="mb-3">
                     <!-- Icon input with float label -->
                     <ejs-textbox id="icon" placeholder="Icon" ejs-for="Icon" floatLabelType="Always" class="e-input"></ejs-textbox>
-                    <span asp-validation-for="Icon" class="text-danger"></span>
+                    <span asp-validation-for="Icon" class="text-danger fs-6"></span>
                 </div>
 
                 <!-- Submit button -->

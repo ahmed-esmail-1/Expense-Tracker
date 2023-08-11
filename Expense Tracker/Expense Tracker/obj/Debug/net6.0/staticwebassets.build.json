@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xn+5HG+PSJ938VAlwu6TGYB1MdGKObLVp+ForjG4jzc=",
+  "Hash": "+rnw6y1s7QTaeX71TnttrvVnEIvbqN9DWLDiXDjyja8=",
   "Source": "Expense Tracker",
   "BasePath": "_content/Expense Tracker",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Expense-Tracker\\Expense Tracker\\Expense Tracker\\wwwroot\\ProfilePic.png",
+      "SourceId": "Expense Tracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Expense-Tracker\\Expense Tracker\\Expense Tracker\\wwwroot\\",
+      "BasePath": "_content/Expense Tracker",
+      "RelativePath": "ProfilePic.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ProfilePic.png"
     }
   ]
 }

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Expense Tracker.bundle.scp.css"
     },
     {
+      "Id": "C:\\Expense-Tracker\\Expense Tracker\\Expense Tracker\\wwwroot\\ProfilePic.png",
+      "PackagePath": "staticwebassets\\ProfilePic.png"
+    },
+    {
       "Id": "C:\\Expense-Tracker\\Expense Tracker\\Expense Tracker\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

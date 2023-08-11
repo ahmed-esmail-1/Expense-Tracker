@@ -4,9 +4,11 @@
     "\\Expense Tracker",
     "\\Expense Tracker\\Controllers",
     "\\Expense Tracker\\Migrations",
+    "\\Expense Tracker\\Models",
     "\\Expense Tracker\\Views",
-    "\\Expense Tracker\\Views\\Category"
+    "\\Expense Tracker\\Views\\Category",
+    "\\Expense Tracker\\Views\\Dashboard"
   ],
-  "SelectedNode": "\\Expense Tracker\\Views\\Category\\Edit.cshtml",
+  "SelectedNode": "\\Expense Tracker\\Controllers\\CategoryController.cs",
   "PreviewInSolutionExplorer": false
 }
